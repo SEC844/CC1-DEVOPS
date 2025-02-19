@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test -- --coverage
+      - name: Run Tests
+        run: npm test
 
       - name: Update README with test results
         run: |
@@ -37,4 +37,4 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           git add README.md
           git commit -m "Update README with test results" || echo "No changes to commit"
-          git push
+          git push  
