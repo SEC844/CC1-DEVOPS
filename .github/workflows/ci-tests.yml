@@ -42,6 +42,14 @@ jobs:
 
     - name: Build
       run: npm run build
+      
+    - name: Build
+      run: |
+        echo "Starting build..."
+        npm run build
+        echo "Build completed"
+        echo "Contents of dist directory:"
+        ls -la dist/
 
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v2.0
