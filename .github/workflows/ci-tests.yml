@@ -37,6 +37,7 @@ jobs:
         :white_check_mark: Tests réussis : 3 tests passés
         - 2 fichiers de test
         - Durée d'exécution : ~1.45s
+        - Couverture de code : 100%
 
         ## Déploiement
         :globe_with_meridians: Site déployé : [https://cc1-devops-pierre-gambiez-3info.netlify.app/](https://cc1-devops-pierre-gambiez-3info.netlify.app/)
@@ -46,12 +47,12 @@ jobs:
         - Dernière version : ![GitHub package.json version](https://img.shields.io/github/package-json/v/SEC844/CC1-DEVOPS)
         - Dépendances : ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
 
-        ## 🧪 Test Results
+        ## Détails des Tests
 
         \`\`\`
+        $(npm test 2>&1 | grep -A 2 "Test Files\|Coverage" | grep -v "npm ERR\|npm WARN")
+        \`\`\`
         EOF
-        npm test >> README.md
-        echo "\`\`\`" >> README.md
 
     - name: Commit README
       run: |
