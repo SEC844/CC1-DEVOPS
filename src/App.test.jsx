@@ -1,4 +1,7 @@
+import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
+import { test, expect } from 'vitest'
+import '@testing-library/jest-dom' // Ajoutez cette ligne
 import App from './App'
 
 test('le bouton doit incrémenter le compteur', () => {
