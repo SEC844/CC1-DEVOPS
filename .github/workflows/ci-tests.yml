@@ -23,16 +23,22 @@ jobs:
 
     - name: Run tests and update README
       run: |
-        echo "# CC1-DEVOPS" > README.md
-        echo "" >> README.md
-        echo "[![CI/CD](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml/badge.svg)](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml)" >> README.md
-        echo "[![Netlify Status](https://api.netlify.com/api/v1/badges/7c5ab796-e192-4810-aa45-5a439e1bf90b/deploy-status)](https://app.netlify.com/sites/cc1-devops-pierre-gambiez-3info/deploys)" >> README.md
-        echo "\n## Test Results\n" >> README.md
+        cat << 'EOF' > README.md
+        # CC1-DEVOPS
+
+        [![CI/CD](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml/badge.svg)](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml)
+        [![Netlify Status](https://api.netlify.com/api/v1/badges/7c5ab796-e192-4810-aa45-5a439e1bf90b/deploy-status)](https://app.netlify.com/sites/cc1-devops-pierre-gambiez-3info/deploys)
+
+        ## 🚀 Deployment
+
+        **Site URL:** [https://cc1-devops-pierre-gambiez-3info.netlify.app/](https://cc1-devops-pierre-gambiez-3info.netlify.app/)
+
+        ## 🧪 Test Results
+
+        \`\`\`
+        EOF
+        npm test >> README.md
         echo "\`\`\`" >> README.md
-        npm test | tee -a README.md
-        echo "\`\`\`" >> README.md
-        echo "\n## Deployment\n" >> README.md
-        echo "This project is deployed on Netlify: [View Live Site](https://cc1-devops-pierre-gambiez-3info.netlify.app/)" >> README.md
 
     - name: Commit README
       run: |
