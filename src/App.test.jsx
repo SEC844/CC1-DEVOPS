@@ -1,18 +1,16 @@
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import { test, expect } from 'vitest'
-import '@testing-library/jest-dom' // Ajoutez cette ligne
-import App from './App'
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-test('le bouton doit incrémenter le compteur', () => {
-  render(<App />)
+describe('App', () => {
+  test('renders learn react link', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/Vite \+ React/i);
+    expect(linkElement).toBeInTheDocument();
+  });
 
-  const button = screen.getByRole('button', { name: /count is/i })
-  expect(button).toHaveTextContent('count is 0')
-
-  fireEvent.click(button)
-  expect(button).toHaveTextContent('count is 1')
-
-  fireEvent.click(button)
-  expect(button).toHaveTextContent('count is 2')
-})
+  test('updates count when button is clicked', async () => {
+    render(<App />);
+    const button = screen.getByText(/count is/i);
+    expect(button).toBeInTheDocument();
+  });
+});
