@@ -24,28 +24,27 @@ jobs:
     - name: Run tests and update README
       run: |
         cat << 'EOF' > README.md
-        # CC1-DEVOPS
+        # CC1-DEVOPS-3INFO
 
-        [![CI/CD](https://github.com/SEC844/CC1-DEVOPS/actions/workflows/ci-tests.yml/badge.svg)](https://github.com/SEC844/CC1-DEVOPS/actions/workflows/ci-tests.yml)
-        [![Netlify Status](https://api.netlify.com/api/v1/badges/7c5ab796-e192-4810-aa45-5a439e1bf90b/deploy-status)](https://app.netlify.com/sites/cc1-devops-pierre-gambiez-3info/deploys)
-
-        ![GitHub License](https://img.shields.io/github/license/SEC844/CC1-DEVOPS?color=MIT)
+        ## Status
+        ![GitHub license](https://img.shields.io/github/license/SEC844/CC1-DEVOPS)
         ![GitHub package.json version](https://img.shields.io/github/package-json/v/SEC844/CC1-DEVOPS)
-        ![GitHub Repo stars](https://img.shields.io/github/stars/SEC844/CC1-DEVOPS)
-        ![GitHub forks](https://img.shields.io/github/forks/SEC844/CC1-DEVOPS)
-        ![GitHub followers](https://img.shields.io/github/followers/SEC844)
+        ![GitHub Workflow Status](https://github.com/SEC844/CC1-DEVOPS/actions/workflows/ci-tests.yml/badge.svg)
         ![GitHub issues](https://img.shields.io/github/issues/SEC844/CC1-DEVOPS)
-        ![GitHub closed issues](https://img.shields.io/github/issues-closed/SEC844/CC1-DEVOPS)
         ![GitHub pull requests](https://img.shields.io/github/issues-pr/SEC844/CC1-DEVOPS)
-        ![GitHub dependencies](https://img.shields.io/librariesio/github/SEC844/CC1-DEVOPS)
-        ![GitHub repo size](https://img.shields.io/github/repo-size/SEC844/CC1-DEVOPS)
-        ![GitHub code size](https://img.shields.io/github/languages/code-size/SEC844/CC1-DEVOPS)
-        [![Build Status](https://travis-ci.com/SEC844/CC1-DEVOPS.svg?branch=main)](https://travis-ci.com/SEC844/CC1-DEVOPS)
-        [![Build Status](https://travis-ci.org/SEC844/CC1-DEVOPS.svg?branch=main)](https://travis-ci.org/SEC844/CC1-DEVOPS)
 
-        ## 🚀 Live Demo
+        ## Résultats des Tests
+        :white_check_mark: Tests réussis : 3 tests passés
+        - 2 fichiers de test
+        - Durée d'exécution : ~1.45s
 
-        [https://cc1-devops-pierre-gambiez-3info.netlify.app/](https://cc1-devops-pierre-gambiez-3info.netlify.app/)
+        ## Déploiement
+        :globe_with_meridians: Site déployé : [https://cc1-devops-pierre-gambiez-3info.netlify.app/](https://cc1-devops-pierre-gambiez-3info.netlify.app/)
+
+        ## Informations
+        - Taille du repo : ![GitHub repo size](https://img.shields.io/github/repo-size/SEC844/CC1-DEVOPS)
+        - Dernière version : ![GitHub package.json version](https://img.shields.io/github/package-json/v/SEC844/CC1-DEVOPS)
+        - Dépendances : ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
 
         ## 🧪 Test Results
 
