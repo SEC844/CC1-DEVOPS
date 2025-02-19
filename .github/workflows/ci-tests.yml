@@ -16,13 +16,31 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20' # Spécifie une version plus récente de Node
+        node-version: '20'
 
     - name: Install dependencies
-      run: npm install --legacy-peer-deps # Ajoute le flag pour gérer les dépendances
+      run: npm install --legacy-peer-deps
 
-    - name: Run tests
-      run: npm test
+    - name: Run tests and update README
+      run: |
+        echo "# CC1-DEVOPS" > README.md
+        echo "" >> README.md
+        echo "[![CI/CD](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml/badge.svg)](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml)" >> README.md
+        echo "[![Netlify Status](https://api.netlify.com/api/v1/badges/7c5ab796-e192-4810-aa45-5a439e1bf90b/deploy-status)](https://app.netlify.com/sites/cc1-devops-pierre-gambiez-3info/deploys)" >> README.md
+        echo "\n## Test Results\n" >> README.md
+        echo "\`\`\`" >> README.md
+        npm test | tee -a README.md
+        echo "\`\`\`" >> README.md
+        echo "\n## Deployment\n" >> README.md
+        echo "This project is deployed on Netlify: [View Live Site](https://cc1-devops-pierre-gambiez-3info.netlify.app/)" >> README.md
+
+    - name: Commit README
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add README.md
+        git commit -m "Update README with test results and deployment URL" || echo "No changes to commit"
+        git push
 
   deploy:
     needs: test
@@ -38,18 +56,10 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm ci --legacy-peer-deps
+      run: npm install --legacy-peer-deps
 
     - name: Build
       run: npm run build
-      
-    - name: Build
-      run: |
-        echo "Starting build..."
-        npm run build
-        echo "Build completed"
-        echo "Contents of dist directory:"
-        ls -la dist/
 
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v2.0

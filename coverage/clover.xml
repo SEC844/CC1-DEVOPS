@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1739955668313" clover="3.2.0">
-  <project timestamp="1739955668313" name="All files">
+<coverage generated="1739957199364" clover="3.2.0">
+  <project timestamp="1739957199364" name="All files">
     <metrics statements="35" coveredstatements="35" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1" elements="38" coveredelements="37" complexity="0" loc="35" ncloc="35" packages="1" files="1" classes="1"/>
     <file name="App.jsx" path="C:\Users\pierr\Desktop\Cours\DevOps\CC1-DEVOPS-3INFO-master\CC1-DEVOPS-3INFO-master\src\App.jsx">
       <metrics statements="35" coveredstatements="35" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
