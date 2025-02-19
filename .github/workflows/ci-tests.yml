@@ -26,12 +26,26 @@ jobs:
         cat << 'EOF' > README.md
         # CC1-DEVOPS
 
-        [![CI/CD](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml/badge.svg)](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/main.yml)
+        [![CI/CD](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/ci-tests.yml/badge.svg)](https://github.com/PierreGambaud/CC1-DEVOPS/actions/workflows/ci-tests.yml)
         [![Netlify Status](https://api.netlify.com/api/v1/badges/7c5ab796-e192-4810-aa45-5a439e1bf90b/deploy-status)](https://app.netlify.com/sites/cc1-devops-pierre-gambiez-3info/deploys)
 
-        ## 🚀 Deployment
+        ![GitHub License](https://img.shields.io/github/license/PierreGambaud/CC1-DEVOPS?color=MIT)
+        ![GitHub package.json version](https://img.shields.io/github/package-json/v/PierreGambaud/CC1-DEVOPS)
+        ![GitHub Repo stars](https://img.shields.io/github/stars/PierreGambaud/CC1-DEVOPS)
+        ![GitHub forks](https://img.shields.io/github/forks/PierreGambaud/CC1-DEVOPS)
+        ![GitHub followers](https://img.shields.io/github/followers/PierreGambaud)
+        ![GitHub issues](https://img.shields.io/github/issues/PierreGambaud/CC1-DEVOPS)
+        ![GitHub closed issues](https://img.shields.io/github/issues-closed/PierreGambaud/CC1-DEVOPS)
+        ![GitHub pull requests](https://img.shields.io/github/issues-pr/PierreGambaud/CC1-DEVOPS)
+        ![GitHub dependencies](https://img.shields.io/librariesio/github/PierreGambaud/CC1-DEVOPS)
+        ![GitHub repo size](https://img.shields.io/github/repo-size/PierreGambaud/CC1-DEVOPS)
+        ![GitHub code size](https://img.shields.io/github/languages/code-size/PierreGambaud/CC1-DEVOPS)
+        [![Build Status](https://travis-ci.com/PierreGambaud/CC1-DEVOPS.svg?branch=main)](https://travis-ci.com/PierreGambaud/CC1-DEVOPS)
+        [![Build Status](https://travis-ci.org/PierreGambaud/CC1-DEVOPS.svg?branch=main)](https://travis-ci.org/PierreGambaud/CC1-DEVOPS)
 
-        **Site URL:** [https://cc1-devops-pierre-gambiez-3info.netlify.app/](https://cc1-devops-pierre-gambiez-3info.netlify.app/)
+        ## 🚀 Live Demo
+
+        [https://cc1-devops-pierre-gambiez-3info.netlify.app/](https://cc1-devops-pierre-gambiez-3info.netlify.app/)
 
         ## 🧪 Test Results
 
